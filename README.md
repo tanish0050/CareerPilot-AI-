@@ -4,6 +4,8 @@
 
 > CareerPilot AI is a planning aid. Its match/readiness scores are heuristic signals—not hiring probabilities or guarantees.
 
+##LIVE LINK- https://careerpilot-ai-ygc4.onrender.com
+
 ## What it does
 
 - **Resume input:** paste resume text or upload a text-based PDF (up to 8 MB).
