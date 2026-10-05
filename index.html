@@ -1,0 +1,510 @@
+<!doctype html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>CareerPilot AI — Career Intelligence</title><link rel="preconnect" href="https://fonts.googleapis.com"><link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Space+Grotesk:wght@500;600;700&display=swap" rel="stylesheet"><style>
+:root{--bg:#070b18;--panel:#101a31;--panel2:#14213e;--line:#263b61;--text:#f4f7ff;--muted:#9bb0d3;--purple:#9b8cff;--cyan:#4fe0d1;--orange:#ffad75}*{box-sizing:border-box}body{margin:0;background:radial-gradient(circle at 4% 0,#202c59 0,transparent 32%),radial-gradient(circle at 100% 15%,#172b51 0,transparent 26%),var(--bg);color:var(--text);font-family:DM Sans,sans-serif}.shell{max-width:1280px;margin:auto;padding:24px}.nav{display:flex;justify-content:space-between;align-items:center}.brand{font:700 21px Space Grotesk}.logo{display:inline-grid;place-items:center;width:36px;height:36px;margin-right:8px;border-radius:11px;background:linear-gradient(135deg,var(--purple),var(--cyan));color:#0b1020}.tag,.badge{border:1px solid var(--line);border-radius:99px;padding:8px 12px;color:var(--muted);font-size:12px}.hero{padding:58px 0 34px;max-width:780px}.eyebrow{color:var(--cyan);font-size:12px;letter-spacing:2px;font-weight:700}.hero h1{font:700 clamp(38px,6vw,66px)/1.04 Space Grotesk;margin:13px 0}.grad{background:linear-gradient(90deg,#b0a5ff,#58e7d5);background-clip:text;color:transparent}.hero p{color:var(--muted);font-size:16px;line-height:1.7}.form-card,.dashboard,.roadmap{border:1px solid var(--line);background:linear-gradient(145deg,#121e38,#0d172a);border-radius:24px;box-shadow:0 25px 70px #0004}.form-card{padding:28px}.form-card h2,.dashboard h2{font:600 22px Space Grotesk;margin:0}.sub{color:var(--muted);line-height:1.6;font-size:13px}.grid{display:grid;grid-template-columns:1fr 1fr;gap:20px}.field{margin-top:16px}.label{display:block;font-size:12px;font-weight:700;margin-bottom:8px;color:#dce6ff}textarea,select{width:100%;background:#091326;color:var(--text);border:1px solid #32496e;border-radius:13px;padding:13px;font:inherit;outline:0}textarea:focus,select:focus{border-color:var(--purple)}textarea{min-height:120px;resize:vertical}.twocol{display:grid;grid-template-columns:1fr 1fr;gap:14px}.upload{display:flex;gap:12px;align-items:center;border:1px dashed #52709a;background:#0a1528;border-radius:14px;padding:14px}.file{display:none}.filebtn,.btn{border:0;border-radius:12px;padding:13px 15px;font-weight:800;cursor:pointer}.filebtn{background:#28244f;color:white;border:1px solid #8779f0}.filemeta{font-size:13px;color:var(--muted)}.filemeta b{display:block;color:var(--text)}.btn{width:100%;margin-top:18px;background:linear-gradient(100deg,#9b8cff,#55d9cf);color:#081224;font-size:14px}.btn:disabled{opacity:.55}.err{display:none;color:#ffd1d1;background:#4a2934;padding:10px;border-radius:10px;margin-top:10px;font-size:13px}.dashboard{display:none;margin-top:22px;padding:28px}.head{display:flex;justify-content:space-between;gap:18px;align-items:start}.metrics{display:grid;grid-template-columns:repeat(4,1fr);gap:12px;margin:22px 0}.metric{background:#0b162a;border:1px solid var(--line);padding:15px;border-radius:15px}.metric b{font:700 24px Space Grotesk;color:var(--cyan);display:block}.metric span{font-size:11px;color:var(--muted)}.insights{display:grid;grid-template-columns:.85fr 1.15fr;gap:18px}.box{background:#0b162a;border:1px solid var(--line);border-radius:17px;padding:18px}.box h3{font:600 15px Space Grotesk;margin:0 0 12px}.chip{display:inline-block;border:1px solid #2d6867;background:#153d46;color:#81f2df;border-radius:30px;padding:7px 9px;margin:0 5px 7px 0;font-size:11px}.chip.miss{border-color:#6e4a39;background:#3c2c28;color:#ffc08c}.role{border:1px solid var(--line);border-radius:15px;padding:15px;margin:10px 0;background:#0c172a}.roleTop{display:flex;justify-content:space-between;font-weight:700}.score{color:var(--cyan);font:700 21px Space Grotesk}.bar{height:6px;background:#283b5d;border-radius:8px;margin:10px 0}.bar i{display:block;height:100%;border-radius:8px;background:linear-gradient(90deg,var(--purple),var(--cyan))}.role p,.small{font-size:12px;line-height:1.6;color:var(--muted)}.roadmap{display:none;margin-top:22px;padding:28px}.step{border-left:2px solid var(--purple);padding:3px 0 16px 17px;margin-left:8px}.step b{font-size:13px}.step a{color:var(--cyan);font-size:12px}.progress{display:flex;gap:9px;align-items:center;color:var(--muted);font-size:12px}.skill-time{display:flex;gap:8px;flex-wrap:wrap}.skill-time button{border:1px solid var(--line);background:#0b162a;color:var(--muted);padding:9px 13px;border-radius:9px;cursor:pointer;font-weight:700}.skill-time button.active{background:linear-gradient(100deg,var(--purple),var(--cyan));color:#091326;border:0}.ai{margin-top:16px;padding:15px;border-radius:15px;background:linear-gradient(100deg,#23204a,#15394a);border:1px solid #565198}.ai button{float:right;width:auto;margin:0;background:#f5f7ff}.aiout{white-space:pre-wrap;clear:both;padding-top:12px;color:#cdd8ef;font-size:13px;line-height:1.6}@media(max-width:850px){.grid,.insights{grid-template-columns:1fr}.metrics{grid-template-columns:repeat(2,1fr)}.shell{padding:15px}.hero{padding:38px 4px 24px}}
+</style><style>
+.space-scene{position:fixed;inset:0;z-index:0;overflow:hidden;pointer-events:none;background:#010208}
+.shell{position:relative;z-index:1}
+.universe-canvas{position:absolute;inset:0;width:100%;height:100%;display:block}
+.space-scene::before{content:"";position:absolute;inset:-42%;pointer-events:none;opacity:.72;filter:blur(32px);transform:rotate(-29deg);background:radial-gradient(ellipse 72% 18% at 50% 50%,#a6a0bd26 0,#656d9130 34%,#39436517 58%,transparent 78%),radial-gradient(ellipse 56% 9% at 48% 49%,#d4ccdf17 0,transparent 72%)}
+@media(prefers-reduced-motion:reduce){.space-scene::before{animation:none}}
+</style></head><body><div class="space-scene" aria-hidden="true"><canvas class="universe-canvas" id="universeCanvas"></canvas></div><div class="shell"><nav class="nav"><div class="brand"><span class="logo">✦</span>CareerPilot <span class="grad">AI</span></div><span class="tag">Career intelligence platform</span></nav><header class="hero"><div class="eyebrow">BUILD A CAREER WITH DIRECTION</div><h1>From resume to a <span class="grad">real career plan.</span></h1><p>Get role-fit analysis, skill gaps, a realistic learning timeline, project ideas and AI-powered career guidance—all in one dashboard.</p></header><section class="form-card"><h2>Build your career profile</h2><p class="sub">Add your resume, target role and available time. We’ll create an actionable career path.</p><form id="form"><div><div class="field"><label class="label">Target role</label><select id="target"><option value="">Discover best-fit role</option></select></div></div><div class="field"><label class="label">Job description (optional)</label><textarea id="jd" placeholder="Paste a job description for ATS skill matching..."></textarea></div><div class="field"><label class="label">Resume PDF</label><div class="upload"><button class="filebtn" type="button" id="pick">Choose PDF</button><input class="file" type="file" id="file" accept="application/pdf"><div class="filemeta"><b id="fname">No PDF selected</b>PDF only · Max 8 MB</div></div></div><div class="field"><label class="label">Or paste resume text</label><textarea id="resume" placeholder="Paste your education, skills, projects, experience and achievements..."></textarea></div><button class="btn" id="submit">Analyze my career profile →</button><div class="err" id="error"></div></form></section><section class="dashboard" id="dashboard"><div class="head"><div><h2>Your career command center</h2><p class="sub" id="meta"></p></div><span class="badge" id="level">Profile signals</span></div><div class="metrics"><div class="metric"><b id="mScore">—</b><span>Profile strength</span></div><div class="metric"><b id="mRoles">—</b><span>Roles compared</span></div><div class="metric"><b id="mSkills">—</b><span>Skills recognized</span></div><div class="metric"><b id="mTime">—</b><span>Plan duration</span></div></div><section class="box" style="margin:0 0 18px"><div class="roleTop"><h3 style="margin:0">⏱ Plan your learning time</h3><span class="badge" id="timeLabel">10 hrs/week</span></div><p class="small">Choose your weekly commitment after we analyze your profile.</p><div class="skill-time"><button data-hours="5">5 hrs</button><button data-hours="10" class="active">10 hrs</button><button data-hours="15">15 hrs</button><button data-hours="20">20+ hrs</button></div></section><div class="insights"><div class="box"><h3>Skills you already have</h3><div id="skills"></div><h3 style="margin-top:18px">Next priority skills</h3><div id="gaps"></div></div><div class="box"><h3>Best career matches</h3><div id="roles"></div></div></div><section class="box" style="margin-top:18px"><div class="roleTop"><h3 style="margin:0">🎯 Interview Practice Lab</h3><span class="badge">Role-specific</span></div><p class="small">Practice questions based on your selected career path. Use this after completing each roadmap stage.</p><button class="filebtn" type="button" id="interviewButton">Start mock interview</button><div id="interviewOutput" class="aiout"></div></section></section><section class="roadmap" id="roadmap"><div class="head"><div><h2>Your guided learning roadmap</h2><p class="sub" id="roadmeta"></p></div><span class="badge" id="ready"></span></div><div id="steps" style="margin-top:20px"></div><div class="box"><h3>Portfolio projects that will matter</h3><div id="projects" class="small"></div></div></section></div><script>
+const $=id=>document.getElementById(id),form=$('form'),file=$('file'),error=$('error');$('pick').onclick=()=>file.click();file.onchange=()=>{$('fname').textContent=file.files[0]?.name||'No PDF selected'};let latest='';window.careerpilotRoadmap=null;window.careerpilotRoadmapRequest=null;
+fetch('/api/roles').then(x=>x.json()).then(a=>a.forEach(r=>{$('target').insertAdjacentHTML('beforeend',`<option value="${r.title}">${r.title}</option>`)}));
+const chips=(a,miss=false)=>a.length?a.map(x=>`<span class="chip ${miss?'miss':''}">${x}</span>`).join(''):'<span class="small">No matching skills found yet.</span>';
+form.onsubmit=async e=>{e.preventDefault();let text=$('resume').value.trim(),f=file.files[0];if(!text&&!f)return show('Paste resume text or choose a PDF.');const b=new FormData();b.append('resume_text',text);b.append('job_description',$('jd').value);b.append('target_role',$('target').value);
+if(f)b.append('resume_file',f);$('submit').disabled=true;try{let r=await fetch('/api/analyze',{method:'POST',body:b}),d=await r.json();if(!r.ok)throw Error(d.detail);latest=text||d.resume_skills.join(' ');render(d);window.careerpilotRoadmapRequest=roadmap(latest)}catch(x){show(x.message)}finally{$('submit').disabled=false}}
+function show(x){if(location.protocol==='file:'){x='API se connect nahi ho pa raha. HTML file ko direct open na karein; http://127.0.0.1:8000 par CareerPilot kholen.'}else if(x==='Failed to fetch'){x='CareerPilot API reachable nahi hai. Server running hai ya nahi check karein, phir page reload karein.'}error.textContent=x;error.style.display='block'}
+function render(d){error.style.display='none';$('dashboard').style.display='block';$('meta').textContent=`${d.word_count} words analyzed · personalized results generated`; $('level').textContent=`${d.profile_score}/100 profile signals`;$('mScore').textContent=d.profile_score+'%';$('mRoles').textContent=d.recommendations.length;$('mSkills').textContent=d.resume_skills.length;$('skills').innerHTML=chips(d.resume_skills);let gaps=d.recommendations[0]?.missing_skills||[];$('gaps').innerHTML=chips(gaps,true);$('roles').innerHTML=d.recommendations.map((r,i)=>`<article class="role"><div class="roleTop"><span>${i+1}. ${r.title}</span><span class="score">${r.score}%</span></div><div class="bar"><i style="width:${r.score}%"></i></div><p>${r.description}</p><b class="small">MATCHED SKILLS</b><div>${chips(r.matched_skills)}</div><b class="small">BUILD NEXT</b><div>${chips(r.missing_skills,true)}</div></article>`).join('')}async function roadmap(text){if(!text)return;$('roadmap').style.display='block';let b=new FormData();b.append('resume_text',text);b.append('target_role',$('target').value||window.careerpilotAnalysis?.recommendations?.[0]?.title||'');b.append('weekly_hours',$('hours').value);let r=await fetch('/api/roadmap',{method:'POST',body:b}),d=await r.json();if(!r.ok)throw Error(d.detail||'Could not create the learning roadmap.');window.careerpilotRoadmap=d;$('mTime').textContent=d.total_weeks+' wks';$('roadmeta').textContent=`${d.weekly_hours} hours/week · focused plan for ${d.role}`;$('ready').textContent=`${d.job_readiness}% job ready`;$('steps').innerHTML=d.plan.map((s,i)=>`<div class="step"><b>Weeks ${s.week_start}–${s.week_end} · ${s.title}</b><p class="small">Focus: ${s.focus.join(', ')}<br>Build: ${s.task}<br><a target="_blank" href="${s.resource.url}">${s.resource.label} ↗</a></p><div class="progress"><input type="checkbox" id="s${i}"> Mark this stage complete</div></div>`).join('');$('projects').innerHTML=d.projects.map(x=>'• '+x).join('<br>')}async function ai(){if(!latest)return show('Paste resume text to use AI Coach.');$('aiOutput').textContent='AI is reviewing your profile…';let b=new FormData();b.append('resume_text',latest);b.append('job_description',$('jd').value);let r=await fetch('/api/ai-review',{method:'POST',body:b}),d=await r.json();$('aiOutput').textContent=r.ok?d.review:d.detail}</script><script>
+window.currentHours = 10;
+const hoursField = document.createElement('input');
+hoursField.type = 'hidden';
+hoursField.id = 'hours';
+hoursField.value = '10';
+document.body.appendChild(hoursField);
+document.querySelectorAll('[data-hours]').forEach(function(btn){btn.addEventListener('click',function(){window.currentHours=Number(btn.dataset.hours);document.querySelectorAll('[data-hours]').forEach(function(x){x.classList.toggle('active',x===btn)});document.getElementById('timeLabel').textContent=(window.currentHours===20?'20+':window.currentHours)+' hrs/week';document.getElementById('hours').value=String(window.currentHours);if(latest){window.careerpilotRoadmapRequest=roadmap(latest)}})});
+</script><script>
+const interviewButton=document.getElementById('interviewButton'),interviewOutput=document.getElementById('interviewOutput');
+interviewButton.addEventListener('click',async()=>{interviewButton.disabled=true;interviewButton.textContent='Preparing…';try{const b=new FormData();b.append('target_role',document.getElementById('target').value);const r=await fetch('/api/mock-interview',{method:'POST',body:b});const d=await r.json();interviewOutput.innerHTML='<b>'+d.role+' interview set</b><ol>'+d.questions.map(q=>'<li style="margin:8px 0">'+q+'</li>').join('')+'</ol><p class="small">'+d.tip+'</p>'}catch(e){interviewOutput.textContent='Could not load practice questions.'}finally{interviewButton.disabled=false;interviewButton.textContent='Start mock interview'}});
+</script><script>
+window.careerpilotAnalysis = null;
+const renderWithReportData = render;
+render = function (data) {
+	window.careerpilotAnalysis = data;
+	renderWithReportData(data);
+	let growthPanel = document.getElementById('growthPlanPanel');
+	if (!growthPanel) {
+		growthPanel = document.createElement('section');
+		growthPanel.className = 'box';
+		growthPanel.id = 'growthPlanPanel';
+		growthPanel.style.marginTop = '18px';
+	}
+	growthPanel.innerHTML = `<div class="roleTop"><h3 style="margin:0">Build proof beyond skills</h3><span class="badge">Projects · experience · community</span></div><p class="small">Skills are only one part of a strong profile. Build real work, take part in events, and document what you actually did.</p><div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(230px,1fr));gap:10px">${(data.growth_plan || []).map(item => `<article class="role"><div class="roleTop"><b>${item.category}</b><span class="badge">${item.in_resume ? 'Mentioned in resume' : 'Opportunity'}</span></div><p class="small">${item.action}</p><a class="small" href="${item.resource_url}" target="_blank" rel="noopener noreferrer">${item.resource_label} ↗</a></article>`).join('')}</div><p class="small">Only list hackathons, internships, and contributions after you have actually completed them.</p>`;
+	let projectPanel = document.getElementById('projectRecommendations');
+	if (!projectPanel) {
+		projectPanel = document.createElement('section');
+		projectPanel.className = 'box';
+		projectPanel.id = 'projectRecommendations';
+		projectPanel.style.marginTop = '18px';
+	}
+	projectPanel.innerHTML = `<div class="roleTop"><h3 style="margin:0">Project blueprints picked for your resume</h3><span class="badge">AI · Backend · Database</span></div><p class="small">Each idea has a specific twist and measurable proof. “Resume fit” is keyword overlap, not a hiring score.</p><div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(260px,1fr));gap:10px">${(data.project_recommendations || []).map((project, index) => `<article class="role"><div class="roleTop"><b>${project.track}${index === 0 ? ' · ' + project.focus_reason : ''}</b><span class="score">${project.fit_score}%</span></div><h4 style="margin:10px 0">${project.title}</h4><p class="small">${project.concept}</p><p class="small"><b>Make it stand out:</b> ${project.twist}</p><p class="small"><b>Suggested stack:</b> ${project.stack}</p><p class="small"><b>You already have:</b> ${project.matched_skills.join(', ') || 'Start with the fundamentals'}<br><b>Learn next:</b> ${project.next_skills.join(', ') || 'Go deeper with testing and deployment'}</p></article>`).join('')}</div><p class="small">No one can guarantee an idea has never been built. Make yours distinctive with your own users, data, evaluation, and documented decisions.</p>`;
+	document.getElementById('roadmap').insertAdjacentElement('afterend', growthPanel);
+	growthPanel.insertAdjacentElement('afterend', projectPanel);
+};
+
+const dashboardHeader = document.querySelector('.dashboard > .head');
+const downloadReportButton = document.createElement('button');
+downloadReportButton.className = 'filebtn';
+downloadReportButton.type = 'button';
+downloadReportButton.textContent = 'Download PDF report';
+downloadReportButton.setAttribute('aria-label', 'Download career analysis report');
+dashboardHeader.appendChild(downloadReportButton);
+
+downloadReportButton.addEventListener('click', async () => {
+	if (window.careerpilotRoadmapRequest) {
+		try {
+			await window.careerpilotRoadmapRequest;
+		} catch {
+			window.careerpilotRoadmap = null;
+		}
+	}
+	const data = window.careerpilotAnalysis;
+	if (!data) return show('Pehle resume analyze karein, phir report download karein.');
+
+	const lines = [
+		'CAREERPILOT AI — CAREER ANALYSIS REPORT',
+		`Generated: ${new Date().toLocaleDateString()}`,
+		`Target role: ${document.getElementById('target').value || data.recommendations?.[0]?.title || 'Best-fit roles'}`,
+		`Profile strength: ${data.profile_score}%`,
+		`Resume words analyzed: ${data.word_count}`,
+		'',
+		'SKILLS FOUND',
+		...(data.resume_skills.length ? data.resume_skills.map(skill => `- ${skill}`) : ['- No recognized skills found yet.']),
+		'',
+		'CAREER MATCHES',
+		...data.recommendations.flatMap((role, index) => [
+			`${index + 1}. ${role.title} — ${role.score}%`,
+			role.description,
+			`Matched: ${role.matched_skills.join(', ') || 'None'}`,
+			`Build next: ${role.missing_skills.join(', ') || 'None'}`,
+			''
+		])
+	];
+	const roadmapData = window.careerpilotRoadmap;
+	if (roadmapData?.plan?.length) {
+		lines.push(
+			'',
+			'PERSONALIZED LEARNING ROADMAP',
+			`Role: ${roadmapData.role} | ${roadmapData.weekly_hours} hours/week | about ${roadmapData.total_weeks} weeks`,
+			`Starting readiness estimate: ${roadmapData.job_readiness}% - use as guidance, not a hiring probability.`,
+			...roadmapData.plan.flatMap((stage, index) => [
+				`Stage ${index + 1} - Weeks ${stage.week_start}-${stage.week_end}: ${stage.title}`,
+				`Focus: ${stage.focus.join(', ')}`,
+				`Deliverable: ${stage.task}`,
+				`Time budget: about ${stage.estimated_hours} hours`,
+				`Resource: ${stage.resource.label} - ${stage.resource.url}`,
+				''
+			])
+		);
+	} else {
+		lines.push('', 'PERSONALIZED LEARNING ROADMAP', 'Roadmap is still being prepared. Re-run the analysis and download again in a moment.', '');
+	}
+	lines.push(
+		'',
+		'30-DAY BUILD PLAN',
+		'Week 1 - Choose one project, define the user problem, write a short README plan, and create a small test dataset.',
+		'Week 2 - Build the smallest end-to-end version; get one person to try it and note where they get stuck.',
+		'Week 3 - Add tests, handle failure cases, and measure one meaningful quality or performance metric.',
+		'Week 4 - Deploy a demo, polish the README with screenshots and setup steps, and add the project link to your resume.',
+		''
+	);
+	if (data.growth_plan?.length) {
+		lines.push(
+			'',
+			'BUILD PROOF BEYOND SKILLS',
+			...data.growth_plan.flatMap(item => [
+				`${item.category} — ${item.in_resume ? 'Mentioned in resume' : 'Recommended next step'}`,
+				item.action,
+				`${item.resource_label}: ${item.resource_url}`,
+				''
+			])
+		);
+	}
+	if (data.project_recommendations?.length) {
+		lines.push(
+			'',
+			'PROJECT BLUEPRINTS',
+			...data.project_recommendations.flatMap((project, index) => [
+				`${index === 0 ? project.focus_reason.toUpperCase() : 'ALTERNATIVE'} - ${project.track}: ${project.title}`,
+				`Resume fit: ${project.fit_score}%`,
+				project.concept,
+				`Make it stand out: ${project.twist}`,
+				`Suggested stack: ${project.stack}`,
+				`Skills to build: ${project.next_skills.join(', ') || 'Testing and deployment'}`,
+				''
+			]),
+			'No idea can be guaranteed globally unique; personalize it with your own users, data, and evaluation.'
+		);
+	}
+
+	if (data.job_match) {
+		lines.push(
+			'JOB DESCRIPTION MATCH',
+			`Match score: ${data.job_match.score}%`,
+			`Matched skills: ${data.job_match.matched_skills.join(', ') || 'None'}`,
+			`Missing skills: ${data.job_match.missing_skills.join(', ') || 'None'}`
+		);
+	}
+	lines.push('');
+
+	const cleanLine = value => String(value)
+		.normalize('NFKD')
+		.replace(/[\u0300-\u036f]/g, '')
+		.replace(/[–—]/g, '-')
+		.replace(/[’‘]/g, "'")
+		.replace(/[“”]/g, '"')
+		.replace(/•/g, '-')
+		.replace(/[^\x20-\x7E]/g, '?');
+	const sectionNames = new Set(['SKILLS FOUND', 'CAREER MATCHES', 'PERSONALIZED LEARNING ROADMAP', '30-DAY BUILD PLAN', 'BUILD PROOF BEYOND SKILLS', 'PROJECT BLUEPRINTS', 'JOB DESCRIPTION MATCH']);
+	const rawLines = lines.slice(2).map(cleanLine);
+	const wrapText = (value, maxLength = 83) => {
+		const words = value.split(/\s+/);
+		const result = [];
+		let current = '';
+		for (const word of words) {
+			if (current && `${current} ${word}`.length > maxLength) {
+				result.push(current);
+				current = word;
+			} else {
+				current = current ? `${current} ${word}` : word;
+			}
+		}
+		if (current) result.push(current);
+		return result;
+	};
+	const blocks = [];
+	let cursor = 0;
+	while (cursor < rawLines.length) {
+		const line = rawLines[cursor];
+		if (!line) { cursor++; continue; }
+		if (sectionNames.has(line)) { blocks.push({ type: 'section', title: line }); cursor++; continue; }
+		if (/^(Target role|Profile strength|Resume words analyzed):/.test(line)) {
+			const metadata = [];
+			while (cursor < rawLines.length && /^(Target role|Profile strength|Resume words analyzed):/.test(rawLines[cursor])) metadata.push(rawLines[cursor++]);
+			blocks.push({ type: 'metadata', lines: metadata });
+			continue;
+		}
+		if (line.startsWith('- ')) {
+			const skills = [];
+			while (cursor < rawLines.length && rawLines[cursor].startsWith('- ')) skills.push(rawLines[cursor++].slice(2));
+			blocks.push({ type: 'skills', lines: skills });
+			continue;
+		}
+		if (/^\d+\. /.test(line)) {
+			const title = line;
+			const details = [];
+			cursor++;
+			while (cursor < rawLines.length && rawLines[cursor] && !sectionNames.has(rawLines[cursor]) && !/^\d+\. /.test(rawLines[cursor])) details.push(rawLines[cursor++]);
+			blocks.push({ type: 'role', title, lines: details });
+			continue;
+		}
+		if (/^(Portfolio project|Hackathons|Internships|Extracurricular & community) - /.test(line)) {
+			const title = line;
+			const details = [];
+			cursor++;
+			while (cursor < rawLines.length && rawLines[cursor] && !sectionNames.has(rawLines[cursor]) && !/^(Portfolio project|Hackathons|Internships|Extracurricular & community) - /.test(rawLines[cursor])) details.push(rawLines[cursor++]);
+			blocks.push({ type: 'role', title, lines: details });
+			continue;
+		}
+		if (/^(BEST FIT|SELECTED CAREER TRACK|STRONGEST RESUME OVERLAP|ALTERNATIVE|Stage \d+ - Weeks|Week \d+ - )/.test(line)) {
+			const title = line;
+			const details = [];
+			cursor++;
+			while (cursor < rawLines.length && rawLines[cursor] && !sectionNames.has(rawLines[cursor]) && !/^(BEST FIT|SELECTED CAREER TRACK|STRONGEST RESUME OVERLAP|ALTERNATIVE|Stage \d+ - Weeks|Week \d+ - )/.test(rawLines[cursor])) details.push(rawLines[cursor++]);
+			blocks.push({ type: 'role', title, lines: details });
+			continue;
+		}
+		blocks.push({ type: 'paragraph', lines: [line] });
+		cursor++;
+	}
+	const pages = [];
+	let commands = [];
+	let y = 0;
+	const escapePdf = value => value.replace(/[\\()]/g, '\\$&');
+	const addText = (value, x, baseline, font = 'F1', size = 9, color = '0.08 g') => {
+		commands.push(`${color} BT /${font} ${size} Tf ${x} ${baseline} Td (${escapePdf(value)}) Tj ET`);
+	};
+	const addRect = (x, bottom, width, height, fill, border = null) => {
+		commands.push(`${fill} rg ${x} ${bottom} ${width} ${height} re f`);
+		if (border) commands.push(`${border} RG 0.7 w ${x} ${bottom} ${width} ${height} re S`);
+	};
+	const startPage = () => {
+		commands = [
+			'0.99 g 0 0 595 842 re f',
+			'0.035 0.075 0.16 rg 0 742 595 100 re f',
+			'0.30 0.84 0.78 rg 0 739 595 3 re f',
+			'1 1 1 rg BT /F2 19 Tf 50 802 Td (CAREERPILOT AI) Tj ET',
+			'0.82 0.88 0.95 rg BT /F1 11 Tf 50 782 Td (CAREER ANALYSIS REPORT) Tj ET',
+			`0.82 0.88 0.95 rg BT /F1 9 Tf 50 760 Td (${escapePdf(cleanLine(lines[1]))}) Tj ET`
+		];
+		y = 716;
+		pages.push(commands);
+	};
+	const ensureSpace = height => {
+		if (y - height < 58) startPage();
+	};
+	startPage();
+	for (let index = 0; index < blocks.length; index++) {
+		const block = blocks[index];
+		if (block.type === 'section') {
+			ensureSpace(31);
+			y -= 5;
+			addRect(50, y - 7, 495, 24, '0.93 0.96 0.98');
+			addRect(50, y - 7, 4, 24, '0.30 0.84 0.78');
+			addText(block.title, 64, y + 1, 'F2', 10, '0.08 g');
+			y -= 31;
+			continue;
+		}
+		if (block.type === 'metadata') {
+			ensureSpace(72);
+			addRect(50, y - 59, 495, 65, '0.99 0.77 0.27');
+			const columns = [50, 215, 380];
+			block.lines.forEach((item, itemIndex) => {
+				const [label, ...rest] = item.split(':');
+				addText(label, columns[itemIndex] + 13, y - 16, 'F2', 8.5, '0.12 g');
+				addText(rest.join(':').trim().slice(0, 27), columns[itemIndex] + 13, y - 38, 'F1', 10, '0.04 g');
+			});
+			y -= 78;
+			continue;
+		}
+		if (block.type === 'skills') {
+			const skills = block.lines;
+			const chipRows = [];
+			let row = [];
+			let rowWidth = 0;
+			for (const skill of skills) {
+				const chipWidth = Math.min(150, Math.max(42, skill.length * 5.1 + 18));
+				if (row.length && rowWidth + chipWidth + 8 > 478) {
+					chipRows.push(row);
+					row = [];
+					rowWidth = 0;
+				}
+				row.push({ skill, width: chipWidth });
+				rowWidth += chipWidth + 8;
+			}
+			if (row.length) chipRows.push(row);
+			const cardHeight = chipRows.length * 27 + 20;
+			ensureSpace(cardHeight + 8);
+			addRect(50, y - cardHeight + 7, 495, cardHeight, '0.96 0.98 0.99', '0.82 0.87 0.90');
+			let chipY = y - 18;
+			for (const chipRow of chipRows) {
+				let chipX = 62;
+				for (const chip of chipRow) {
+					addRect(chipX, chipY - 5, chip.width, 19, '0.88 0.95 0.95');
+					addText(chip.skill, chipX + 8, chipY + 1, 'F1', 8.5, '0.08 g');
+					chipX += chip.width + 8;
+				}
+				chipY -= 27;
+			}
+			y -= cardHeight + 15;
+			continue;
+		}
+		if (block.type === 'role') {
+			const detailRows = block.lines.flatMap(detail => wrapText(detail.startsWith('Matched:') || detail.startsWith('Build next:') ? detail : detail, 88));
+			const cardHeight = 29 + detailRows.length * 13 + 12;
+			ensureSpace(cardHeight + 8);
+			addRect(50, y - cardHeight + 6, 495, cardHeight, '0.975 0.98 0.985', '0.80 0.86 0.89');
+			addRect(50, y - cardHeight + 6, 4, cardHeight, '0.30 0.84 0.78');
+			addText(wrapText(block.title, 78)[0], 64, y - 11, 'F2', 9.5, '0.04 g');
+			let detailY = y - 29;
+			for (const detail of detailRows) {
+				const isSkillLine = /^(Matched:|Build next:|Match score:|Missing skills:)/.test(detail);
+				addText(detail, isSkillLine ? 72 : 64, detailY, 'F1', 8.4, isSkillLine ? '0.18 0.38 0.40 rg' : '0.12 g');
+				detailY -= 13;
+			}
+			y -= cardHeight + 10;
+			continue;
+		}
+		const paragraphRows = wrapText(block.lines.join(' '));
+		const paragraphHeight = paragraphRows.length * 13 + 8;
+		ensureSpace(paragraphHeight);
+		for (const paragraph of paragraphRows) {
+			addText(paragraph, 56, y, 'F1', 8.5, '0.28 g');
+			y -= 13;
+		}
+		y -= 6;
+	}
+	const pageObjectIds = pages.map((_, index) => 3 + index * 2);
+	const regularFontId = 3 + pages.length * 2;
+	const boldFontId = regularFontId + 1;
+	const objects = [];
+	objects[1] = '<< /Type /Catalog /Pages 2 0 R >>';
+	objects[2] = `<< /Type /Pages /Kids [${pageObjectIds.map(id => `${id} 0 R`).join(' ')}] /Count ${pages.length} >>`;
+	objects[regularFontId] = '<< /Type /Font /Subtype /Type1 /BaseFont /Helvetica >>';
+	objects[boldFontId] = '<< /Type /Font /Subtype /Type1 /BaseFont /Helvetica-Bold >>';
+	pages.forEach((pageCommands, index) => {
+		const pageId = pageObjectIds[index];
+		const contentId = pageId + 1;
+		pageCommands.push(`0.35 g BT /F1 8 Tf 50 28 Td (Guidance only - scores are not hiring probabilities.) Tj ET`);
+		pageCommands.push(`0.35 g BT /F1 8 Tf 500 28 Td (Page ${index + 1} of ${pages.length}) Tj ET`);
+		objects[pageId] = `<< /Type /Page /Parent 2 0 R /MediaBox [0 0 595 842] /Resources << /Font << /F1 ${regularFontId} 0 R /F2 ${boldFontId} 0 R >> >> /Contents ${contentId} 0 R >>`;
+		const content = pageCommands.join('\n');
+		objects[contentId] = `<< /Length ${content.length} >>\nstream\n${content}\nendstream`;
+	});
+
+	let pdf = '%PDF-1.4\n';
+	const offsets = [0];
+	for (let id = 1; id <= boldFontId; id++) {
+		offsets[id] = pdf.length;
+		pdf += `${id} 0 obj\n${objects[id]}\nendobj\n`;
+	}
+	const xrefOffset = pdf.length;
+	pdf += `xref\n0 ${boldFontId + 1}\n0000000000 65535 f \n`;
+	for (let id = 1; id <= boldFontId; id++) {
+		pdf += `${String(offsets[id]).padStart(10, '0')} 00000 n \n`;
+	}
+	pdf += `trailer\n<< /Size ${boldFontId + 1} /Root 1 0 R >>\nstartxref\n${xrefOffset}\n%%EOF`;
+	const report = new Blob([pdf], { type: 'application/pdf' });
+	const link = document.createElement('a');
+	link.href = URL.createObjectURL(report);
+	link.download = `CareerPilot-AI-Report-${new Date().toISOString().slice(0, 10)}.pdf`;
+	link.click();
+	setTimeout(() => URL.revokeObjectURL(link.href), 1000);
+});
+</script><script>
+(() => {
+  const canvas = document.getElementById('universeCanvas');
+  const context = canvas?.getContext('2d', { alpha: true });
+  if (!canvas || !context) return;
+
+  const reducedMotion = window.matchMedia('(prefers-reduced-motion: reduce)');
+  let width = 0;
+  let height = 0;
+  let pixelRatio = 1;
+  let stars = [];
+  let pointerX = 0.5;
+  let pointerY = 0.5;
+  let animationRunning = false;
+	let shootingStar = null;
+	let nextShootingTime = 9000 + Math.random() * 9000;
+
+  function resizeUniverse() {
+    width = window.innerWidth;
+    height = window.innerHeight;
+    pixelRatio = Math.min(window.devicePixelRatio || 1, 1.5);
+    canvas.width = Math.round(width * pixelRatio);
+    canvas.height = Math.round(height * pixelRatio);
+    context.setTransform(pixelRatio, 0, 0, pixelRatio, 0, 0);
+		const count = Math.max(140, Math.min(850, Math.round(width * height / 1500)));
+    stars = Array.from({ length: count }, () => {
+      const depth = Math.random();
+			const x = Math.random() * width;
+			const milkyWayCenter = height * (0.76 - 0.52 * x / Math.max(width, 1));
+			const inMilkyWay = Math.random() < 0.68;
+			const spread = height * (0.04 + Math.random() * 0.15);
+			const clusteredY = milkyWayCenter + (Math.random() + Math.random() + Math.random() - 1.5) * spread;
+      return {
+				x,
+				y: inMilkyWay ? clusteredY : Math.random() * height,
+        depth,
+				inMilkyWay,
+        radius: 0.35 + depth * 1.25,
+        drift: 0.15 + depth * 0.85,
+        phase: Math.random() * Math.PI * 2,
+				twinkle: 0.6 + Math.random() * 1.8,
+				tint: Math.random() < 0.1 ? '255, 224, 190' : Math.random() < 0.2 ? '185, 211, 255' : '232, 241, 255'
+      };
+    });
+    drawUniverse(0);
+  }
+
+  function drawUniverse(time) {
+    context.clearRect(0, 0, width, height);
+		context.save();
+		context.translate(width * 0.5, height * 0.52);
+		context.rotate(-0.5);
+		const bandWidth = Math.max(90, height * 0.32);
+		const milkyWay = context.createLinearGradient(0, -bandWidth, 0, bandWidth);
+		milkyWay.addColorStop(0, 'rgba(88, 97, 132, 0)');
+		milkyWay.addColorStop(0.27, 'rgba(101, 105, 139, 0.035)');
+		milkyWay.addColorStop(0.49, 'rgba(180, 169, 190, 0.10)');
+		milkyWay.addColorStop(0.56, 'rgba(215, 204, 218, 0.075)');
+		milkyWay.addColorStop(0.77, 'rgba(92, 101, 137, 0.045)');
+		milkyWay.addColorStop(1, 'rgba(88, 97, 132, 0)');
+		context.fillStyle = milkyWay;
+		context.fillRect(-width * 1.4, -bandWidth, width * 2.8, bandWidth * 2);
+		context.restore();
+
+    for (const star of stars) {
+      const motionTime = reducedMotion.matches ? 0 : time;
+      const driftX = motionTime * star.drift * 0.002;
+      const parallaxX = reducedMotion.matches ? 0 : (pointerX - 0.5) * star.depth * 24;
+      const parallaxY = reducedMotion.matches ? 0 : (pointerY - 0.5) * star.depth * 18;
+      const x = ((star.x + driftX + parallaxX) % width + width) % width;
+      const y = ((star.y + motionTime * star.drift * 0.00035 + parallaxY) % height + height) % height;
+      const shimmer = reducedMotion.matches ? 0.8 : 0.58 + 0.42 * Math.sin(time * 0.001 * star.twinkle + star.phase);
+	const alpha = (0.15 + star.depth * 0.68) * shimmer * (star.inMilkyWay ? 1.2 : 0.82);
+      context.beginPath();
+	context.fillStyle = `rgba(${star.tint}, ${alpha})`;
+      if (star.radius > 1.25) {
+        context.shadowBlur = star.radius * 5;
+        context.shadowColor = `rgba(129, 185, 255, ${alpha})`;
+      }
+      context.arc(x, y, star.radius, 0, Math.PI * 2);
+      context.fill();
+      context.shadowBlur = 0;
+    }
+
+		if (!reducedMotion.matches && time >= nextShootingTime && !shootingStar) {
+			shootingStar = { x: width * (0.55 + Math.random() * 0.4), y: height * Math.random() * 0.38, started: time };
+			nextShootingTime = time + 12000 + Math.random() * 14000;
+		}
+		if (shootingStar) {
+			const age = time - shootingStar.started;
+			if (age > 850) {
+				shootingStar = null;
+			} else {
+				const x = shootingStar.x - age * 0.48;
+				const y = shootingStar.y + age * 0.3;
+				const fade = 1 - age / 850;
+				const tail = context.createLinearGradient(x + 95, y - 58, x, y);
+				tail.addColorStop(0, 'rgba(205, 225, 255, 0)');
+				tail.addColorStop(1, `rgba(230, 240, 255, ${fade})`);
+				context.strokeStyle = tail;
+				context.lineWidth = 1.5;
+				context.beginPath();
+				context.moveTo(x + 95, y - 58);
+				context.lineTo(x, y);
+				context.stroke();
+			}
+		}
+  }
+
+  function animate(time) {
+    drawUniverse(time);
+    if (!reducedMotion.matches && !document.hidden) {
+      requestAnimationFrame(animate);
+    } else {
+      animationRunning = false;
+    }
+  }
+
+  function startAnimation() {
+    if (animationRunning || reducedMotion.matches || document.hidden) return;
+    animationRunning = true;
+    requestAnimationFrame(animate);
+  }
+
+  window.addEventListener('resize', resizeUniverse, { passive: true });
+  window.addEventListener('pointermove', event => {
+    pointerX = event.clientX / Math.max(width, 1);
+    pointerY = event.clientY / Math.max(height, 1);
+  }, { passive: true });
+  document.addEventListener('visibilitychange', startAnimation);
+  reducedMotion.addEventListener?.('change', () => {
+    drawUniverse(0);
+    startAnimation();
+  });
+
+  resizeUniverse();
+  startAnimation();
+})();
+</script></body></html>

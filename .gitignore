@@ -1,0 +1,19 @@
+# Python virtual environments and generated files
+.venv/
+venv/
+__pycache__/
+*.py[cod]
+
+# Secrets and local configuration
+.env
+.env.*
+!.env.example
+
+# Personal resumes and generated reports
+*.pdf
+careerpilot-report-*.txt
+
+# Local editor and OS files
+.vscode/
+.DS_Store
+Thumbs.db
